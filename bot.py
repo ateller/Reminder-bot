@@ -2,7 +2,7 @@ import telebot
 import time
 
 from telebot import apihelper
-from config import token, prox_ip, id, text, period
+from config import token, id, text, period
 
 def remind():
     try:
@@ -11,9 +11,8 @@ def remind():
     except Exception:
         return True
 
-apihelper.proxy = {'https':prox_ip} #Спасибо ркн
 bot = telebot.TeleBot(token) 
-print(bot.get_me()) #Проверка, что мы справились с ркн
+print(bot.get_me())
 
 while True:
     i = 0
