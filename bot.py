@@ -89,3 +89,4 @@ thread2 = Thread(target = remind_in_cycle, daemon = True)
 
 thread1.start()
 thread2.start()
+thread2.join()
